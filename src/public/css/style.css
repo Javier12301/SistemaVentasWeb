@@ -1,0 +1,131 @@
+:root{
+    /* Paleta Principal */
+    --color-primary: #F97316;
+    --color-primary-dark: #EA580C; /*Hover*/
+    --color-secondary: #CCC5B9;
+    --color-accent: #FBBF24;
+    --color-text-primary: #111827;
+    --color-text-secondary: #4B5563;
+
+    /* Base */
+    --color-background: #F3F4F6; /* Fondo gris claro */
+    --color-surface: #FFFFFF;
+    --color-border: #E5E7EB;
+
+    /*Estados*/
+    --color-success: #10B981;
+    --color-error: #EF4444;
+    --color-warning: #F59E0B;
+
+    /* Tipografía */
+    --font-family: 'Inter', sans-serif;
+}
+
+/* Solución al centrado: Asegurar 100% de altura */
+html, body {
+    height: 100%; 
+    font-family: var(--font-family);
+    line-height: 1.5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.page-center{
+    min-height: 100vh; /* Usamos 100% de la altura del body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Añadir padding para móvil */
+}
+
+.form-container{
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 400px; /* Aumentar un poco el tamaño */
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra más definida */
+    text-align: center; /* Centrar títulos */
+}
+
+.form-container h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.form-container p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Más espacio entre elementos */
+    margin-bottom: 1rem;
+}
+
+.form-label{
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+    text-align: left; /* Alineamos el texto a la izquierda */
+    margin-bottom: 0.25rem;
+}
+
+.form-input{
+    width: 100%;
+    padding: 0.65rem 1rem; /* Padding un poco más grande */
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus{
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+}
+
+.form-button{
+    width: 100%;
+    background: var(--color-primary);
+    color: #FFFFFF;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem; /* Espacio antes del botón */
+}
+
+.form-button:hover{
+    background-color: var(--color-primary-dark);
+}
+
+.text-center-small {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.link-primary {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.link-primary:hover {
+    text-decoration: underline;
+}
